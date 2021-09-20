@@ -80,3 +80,15 @@
     color: red;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .modal__container {
+    flex-direction: column;
+    max-height: 80vh;
+  }
+
+  .modal__media,
+  .modal__content {
+    width: 100%;
+  }
+}

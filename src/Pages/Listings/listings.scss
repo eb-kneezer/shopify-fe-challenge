@@ -5,6 +5,10 @@
 header {
   background-color: #000000;
   color: aliceblue;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
 }
 
 .container {
@@ -17,20 +21,23 @@ header {
   padding: 5px 0px;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 ul {
   display: flex;
   list-style: none;
-}
-
-li {
-  margin-left: 10px;
-}
-
-a {
-  padding: 0.5em 1em;
-  background: white;
-  text-decoration: none;
-  color: #000;
+  & li {
+    margin-left: 10px;
+    & a {
+      padding: 0.5em 1em;
+      background: white;
+      text-decoration: none;
+      color: #000;
+    }
+  }
 }
 
 .input-container {

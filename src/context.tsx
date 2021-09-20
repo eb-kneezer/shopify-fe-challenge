@@ -52,7 +52,7 @@ export const SpaceContextProvider: FC = ({ children }) => {
   const addToFavorite = (fave: ModalContentType) => {
     const oldFaves = localStorage.getItem("nasaFaves");
 
-    if (oldFaves) {
+    if (oldFaves?.length) {
       setFavorites([...JSON.parse(oldFaves), fave]);
       localStorage.setItem(
         "nasaFaves",
@@ -64,9 +64,16 @@ export const SpaceContextProvider: FC = ({ children }) => {
     }
   };
   const removeFromFavorite = (fave: ModalContentType) => {
-    const newFavorites = favorites.filter(f => f.id !== fave.id);
-    setFavorites(newFavorites);
-    localStorage.setItem("nasaFaves", JSON.stringify(newFavorites));
+    const oldFaves = localStorage.getItem("nasaFaves");
+
+    if (oldFaves?.length) {
+      const newFavorites = JSON.parse(oldFaves).filter(
+        (f: ModalContentType) => f.id !== fave.id
+      );
+
+      setFavorites(newFavorites);
+      localStorage.setItem("nasaFaves", JSON.stringify(newFavorites));
+    }
   };
   const setModalState = (id: boolean) => setmodalState(id);
   const fillModalContent = (content: ModalContentType) =>

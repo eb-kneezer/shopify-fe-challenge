@@ -1,6 +1,7 @@
 import { DisplayText, Heading } from "@shopify/polaris";
 import { useState } from "react";
 import { useHistory } from "react-router";
+import logo from "../../Assets/nasa-logo.svg";
 
 import "./landing.scss";
 
@@ -31,6 +32,7 @@ const Landing = () => {
                 onChange={e => setValue(e.target.value)}
                 value={value}
                 type='text'
+                placeholder='what are you looking for?'
               />
               <button>
                 <i className='fas fa-satellite-dish'></i>
@@ -39,8 +41,9 @@ const Landing = () => {
           </div>
         </div>
         <div className='landing__info'>
-          <div className='landing__info--image'></div>
-          <div className='landing__info--text'></div>
+          <div className='landing__info--image'>
+            <img src={logo} alt='nasa-logo' />
+          </div>
         </div>
       </div>
     </div>

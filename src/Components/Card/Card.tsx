@@ -4,7 +4,6 @@ import { SpaceContext } from "../../context";
 import { useContext } from "react";
 
 import { ModalContentType } from "../../context";
-const localFavorites = localStorage.getItem("nasaFaves");
 
 const Card = (props: ModalContentType) => {
   const { setModalState, fillModalContent, addToFavorite, removeFromFavorite } =
@@ -15,6 +14,7 @@ const Card = (props: ModalContentType) => {
     setModalState(true);
   };
 
+  const localFavorites = localStorage.getItem("nasaFaves");
   let isFavorited = false;
 
   if (localFavorites) {
@@ -26,6 +26,7 @@ const Card = (props: ModalContentType) => {
   const handleAddToFavorites = () => {
     isFavorited ? removeFromFavorite(props) : addToFavorite(props);
   };
+
   return (
     <div className='card'>
       <div className='img-container' onClick={handleClick}>

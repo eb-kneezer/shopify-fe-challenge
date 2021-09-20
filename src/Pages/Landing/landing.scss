@@ -17,16 +17,18 @@
     width: 50%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     &--description {
-      margin-bottom: 5em;
+      margin-bottom: 3em;
     }
   }
 
   &__content {
     text-align: center;
+    margin-bottom: 8em;
   }
 }
 
@@ -34,7 +36,6 @@
   align-items: center;
   padding: 5px 5px 5px 10px;
   border: 2px solid #000;
-  border-radius: 15px;
   background: #fff;
   width: 100%;
 
@@ -53,6 +54,28 @@
     cursor: pointer;
     border-radius: 50%;
     background: #000000;
+    color: #fff;
+  }
+}
+
+.landing__info {
+  justify-self: baseline;
+}
+
+@media screen and(max-width: 750px) {
+  .landing__left {
+    display: none;
+  }
+
+  .landing__right {
+    width: 100%;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.459),
+        rgba(0, 0, 0, 0.603)
+      ),
+      url("../../Assets/history-in-hd-e5eDHbmHprg-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
     color: #fff;
   }
 }
