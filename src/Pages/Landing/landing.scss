@@ -1,0 +1,58 @@
+.landing {
+  display: flex;
+  height: 100vh;
+
+  &__left {
+    width: 50%;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.158),
+        rgba(0, 0, 0, 0.603)
+      ),
+      url("../../Assets/history-in-hd-e5eDHbmHprg-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--description {
+      margin-bottom: 5em;
+    }
+  }
+
+  &__content {
+    text-align: center;
+  }
+}
+
+.landing__right--search {
+  align-items: center;
+  padding: 5px 5px 5px 10px;
+  border: 2px solid #000;
+  border-radius: 15px;
+  background: #fff;
+  width: 100%;
+
+  & input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+  }
+
+  & button {
+    outline: none;
+    border: none;
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #000000;
+    color: #fff;
+  }
+}

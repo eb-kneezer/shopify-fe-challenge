@@ -1,0 +1,107 @@
+.listings {
+  position: relative;
+}
+
+header {
+  background-color: #000000;
+  color: aliceblue;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1500px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 5px 0px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin-left: 10px;
+}
+
+a {
+  padding: 0.5em 1em;
+  background: white;
+  text-decoration: none;
+  color: #000;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 5px 5px 5px 10px;
+  border: 2px solid #000;
+  background: #fff;
+  width: 40%;
+
+  & input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+  }
+
+  & button {
+    outline: none;
+    border: none;
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #000000;
+    color: #fff;
+  }
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0px;
+}
+
+.main__container {
+  max-width: 1500px;
+  width: 90%;
+  margin: 40px auto;
+  display: column;
+  -moz-columns: 4;
+  columns: 4;
+  gap: 25px;
+}
+
+.loader__container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .main__container {
+    -moz-columns: 3;
+    columns: 3;
+  }
+}
+@media screen and (max-width: 750px) {
+  .main__container {
+    -moz-columns: 2;
+    columns: 2;
+  }
+
+  .input-container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main__container {
+    -moz-columns: 1;
+    columns: 1;
+  }
+}
